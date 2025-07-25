@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 
 const CounterCard = ({ title, color, counter, setCounter }) => {
     const colorsClasses = {
@@ -11,7 +12,11 @@ const CounterCard = ({ title, color, counter, setCounter }) => {
             <p className={`mb-4 text-5xl font-extrabold`}>{counter}</p>
             <div className="flex space-x-4">
                 <button
-                    className={`rounded-xl ${colorsClasses.bgBtn} cursor-pointer px-4 py-2 text-white transition ${colorsClasses.bgBtnHover}`}
+                    className={clsx(
+                        'cursor-pointer rounded-xl px-4 py-2 text-white transition',
+                        colorsClasses.bgBtn,
+                        colorsClasses.bgBtnHover
+                    )}
                     onClick={() => {
                         setCounter((prev) => prev + 1)
                     }}
