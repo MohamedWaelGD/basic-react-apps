@@ -14,25 +14,29 @@ const Counter = () => {
                     title={'Likes'}
                     counter={likes}
                     setCounter={setLikes}
-                    color={'indigo'}
+                    bgBtnCss={'bg-indigo-500'}
+                    bgBtnHoverCss={'hover:bg-indigo-600'}
                 />
                 <CounterCard
                     title={'Followers'}
                     counter={followers}
                     setCounter={setFollowers}
-                    color={'pink'}
+                    bgBtnCss={'bg-pink-500'}
+                    bgBtnHoverCss={'hover:bg-pink-600'}
                 />
                 <CounterCard
                     title={'Downloads'}
                     counter={downloads}
                     setCounter={setDownloads}
-                    color={'blue'}
+                    bgBtnCss={'bg-blue-500'}
+                    bgBtnHoverCss={'hover:bg-blue-600'}
                 />
                 <CounterCard
                     title={'Shares'}
                     counter={shares}
                     setCounter={setShares}
-                    color={'green'}
+                    bgBtnCss={'bg-green-500'}
+                    bgBtnHoverCss={'hover:bg-green-600'}
                 />
             </div>
         </div>

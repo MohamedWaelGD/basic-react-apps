@@ -1,11 +1,13 @@
 import React from 'react'
 import clsx from 'clsx'
 
-const CounterCard = ({ title, color, counter, setCounter }) => {
-    const colorsClasses = {
-        bgBtn: `bg-${color}-500`,
-        bgBtnHover: `hover:bg-${color}-600`,
-    }
+const CounterCard = ({
+    title,
+    bgBtnCss = 'bg-indigo-500',
+    bgBtnHoverCss = 'hover:bg-indigo-600',
+    counter,
+    setCounter,
+}) => {
     return (
         <div className="bg-opacity-80 transform rounded-2xl bg-white p-6 shadow-2xl backdrop-blur-lg transition-transform hover:scale-105">
             <h3 className="mb-2 text-xl font-bold text-gray-700">{title}</h3>
@@ -14,8 +16,8 @@ const CounterCard = ({ title, color, counter, setCounter }) => {
                 <button
                     className={clsx(
                         'cursor-pointer rounded-xl px-4 py-2 text-white transition',
-                        colorsClasses.bgBtn,
-                        colorsClasses.bgBtnHover
+                        bgBtnCss,
+                        bgBtnHoverCss
                     )}
                     onClick={() => {
                         setCounter((prev) => prev + 1)
